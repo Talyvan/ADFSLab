@@ -139,7 +139,7 @@
     "nsgTemplateURI": "[concat(parameters('assetLocation'),'Templates/NSGs.json')]",
     "vnetTemplateURI": "[concat(parameters('assetLocation'),'Templates/deployVNet.json')]",
     "vnetDNSTemplateURI": "[concat(parameters('assetLocation'),'Templates/deployVNetDNS.json')]",
-    "adDSCTemplate": "[concat(parameters('assetLocation'),'DSC\\adDSC.zip')]",
+    "adDSCTemplate": "[concat(parameters('assetLocation'),'DSC/adDSC.zip')]",
     "DeployADFSFarmTemplate": "InstallADFS.ps1",
     "DeployADFSFarmTemplateUri": "[concat(parameters('assetLocation'), 'Scripts/InstallADFS.ps1')]",
     "CopyCertToWAPTemplate": "CopyCertToWAP.ps1",
