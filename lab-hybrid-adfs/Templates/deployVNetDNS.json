@@ -20,7 +20,7 @@
       "type": "Microsoft.Network/virtualNetworks",
       "location": "[variables('location')]",
       "tags": { "displayName": "virtualNetwork" },
-      "apiVersion": "2019-03-01",
+      "apiVersion": "2018-05-01",
       "properties": {
         "dhcpOptions": {
           "dnsServers": [ "[parameters('dnsIP')]" ]

@@ -71,7 +71,7 @@
       "name": "[variables('adPubIPName')]",
       "type": "Microsoft.Network/publicIPAddresses",
       "location": "[parameters('location')]",
-      "apiVersion": "2019-03-01",
+      "apiVersion": "2018-05-01",
       "tags": {
         "displayName": "adPubIP"
       },
@@ -83,7 +83,7 @@
       }
     },
     {
-      "apiVersion": "2019-03-01",
+      "apiVersion": "2018-05-01",
       "type": "Microsoft.Network/networkInterfaces",
       "name": "[variables('adNicName')]",
       "location": "[parameters('location')]",
@@ -152,7 +152,7 @@
           "name": "DeployAD",
           "type": "extensions",
           "location": "[resourceGroup().location]",
-          "apiVersion": "2019-03-01",
+          "apiVersion": "2018-05-01",
           "dependsOn": [
             "[concat('Microsoft.Compute/virtualMachines/', concat(parameters('adVMName')))]"
           ],
