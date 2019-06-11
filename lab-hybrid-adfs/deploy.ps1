@@ -119,8 +119,8 @@ $parms=@{
     "defaultUserPassword"         = "Deloitte@1";
 }
 
-$TemplateFile = "$($localAssetLocation)$templateToDeploy"
-#$TemplateFile = "$($AssetLocation)$templateToDeploy" + "?x=5"
+#$TemplateFile = "$($localAssetLocation)$templateToDeploy"
+$TemplateFile = "$($AssetLocation)$templateToDeploy" + "?x=5"
 
 try {
     Get-AzResourceGroup -Name $RGName -ErrorAction Stop
@@ -131,8 +131,8 @@ catch {
     Write-Host "Created new resource group $RGName."
 }
 $version ++
-$deployment = New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateParameterObject $parms -TemplateFile $TemplateFile -Name "adfsDeploy$version"  -Force -Verbose
-#$deployment = New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateParameterObject $parms -TemplateUri $TemplateFile -Name "adfsDeploy$version"  -Force -Verbose
+#$deployment = New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateParameterObject $parms -TemplateFile $TemplateFile -Name "adfsDeploy$version"  -Force -Verbose
+$deployment = New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateParameterObject $parms -TemplateUri $TemplateFile -Name "adfsDeploy$version"  -Force -Verbose
 
 if ($deployment) {
     if (-not (Get-Command Get-FQDNForVM -ErrorAction SilentlyContinue)) {
