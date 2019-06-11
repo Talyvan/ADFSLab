@@ -255,7 +255,7 @@
       "name": "[concat(variables('adVMName'),'/Microsoft.Powershell.DSC')]",
       "type": "Microsoft.Compute/virtualMachines/extensions",
       "location": "[variables('location')]",
-      "apiVersion": "2019-02-01",
+      "apiVersion": "2018-05-01",
       "dependsOn": [
         "Microsoft.Resources/Deployments/adVMs"
       ],
@@ -353,7 +353,7 @@
       "name": "[concat(variables('adfsVMName'), copyIndex(1),'/Microsoft.Powershell.DSC')]",
       "type": "Microsoft.Compute/virtualMachines/extensions",
       "location": "[variables('location')]",
-      "apiVersion": "2019-02-01",
+      "apiVersion": "2018-05-01",
       "copy": {
         "name": "adfsDscCopy",
         "count": "[variables('adfsDeployCount')]"
@@ -396,7 +396,7 @@
       "name": "[concat(variables('adfsVMName'), copyIndex(1),'/InstallADFS')]",
       "type": "Microsoft.Compute/virtualMachines/extensions",
       "location": "[resourceGroup().location]",
-      "apiVersion": "2019-02-01",
+      "apiVersion": "2018-05-01",
       "dependsOn": [
         "adfsDscCopy"
       ],
@@ -424,7 +424,7 @@
       "name": "[concat(variables('wapVMName'), copyIndex(1),'/Microsoft.Powershell.DSC')]",
       "type": "Microsoft.Compute/virtualMachines/extensions",
       "location": "[variables('location')]",
-      "apiVersion": "2019-02-01",
+      "apiVersion": "2018-05-01",
       "copy": {
         "name": "wapDscPrepCopy",
         "count": "[variables('adfsDeployCount')]"
@@ -451,7 +451,7 @@
       "name": "[concat(variables('wapVMName'), copyIndex(1),'/CopyCertToWAP')]",
       "type": "Microsoft.Compute/virtualMachines/extensions",
       "location": "[resourceGroup().location]",
-      "apiVersion": "2019-02-01",
+      "apiVersion": "2018-05-01",
       "dependsOn": [
         "wapDscPrepCopy",
         "adfsFarmInstallCopy"
