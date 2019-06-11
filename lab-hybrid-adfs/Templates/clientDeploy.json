@@ -53,7 +53,7 @@
     "pubIpAddressName": "[toLower(concat('cliPubIp', resourceGroup().name, parameters('deploymentNumber')))]",
     "nicName": "[concat('nic-', parameters('deploymentNumber'), '-')]",
     "copyCount": "[length(parameters('ClientsToDeploy'))]",
-    "apiVersion": "2018-05-01",
+    "apiVersion": "2015-06-15",
     "computeApiVersion": "2016-04-30-preview",
     "domainJoinOptions": 3,
     "ConfigRDPUsers": "ConfigRDPUsers.ps1",
@@ -159,7 +159,7 @@
           "name": "ConfigRDPUsers",
           "type": "extensions",
           "location": "[resourceGroup().location]",
-          "apiVersion": "2018-05-01",
+          "apiVersion": "2015-06-15",
           "dependsOn": [
             "[concat('cli-Win', parameters('ClientsToDeploy')[copyIndex()], '-', copyIndex(1), '-', parameters('deploymentNumber'))]"
           ],
