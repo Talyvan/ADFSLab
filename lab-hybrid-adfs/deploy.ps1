@@ -120,7 +120,8 @@ $parms=@{
 }
 
 #$TemplateFile = "$($localAssetLocation)$templateToDeploy"
-$TemplateFile = "$($AssetLocation)$templateToDeploy" + "?x=5"
+#$TemplateFile = "$($AssetLocation)$templateToDeploy" + "?x=5"
+$TemplateFile = "$($AssetLocation)$templateToDeploy"
 
 try {
     Get-AzResourceGroup -Name $RGName -ErrorAction Stop
