@@ -55,7 +55,8 @@ if ($ctx.SubscriptionName -ne $AzureSub) { Set-AzContext -SubscriptionName $Azur
     $DeployRegion            = "southcentralus"
 
     $Branch                  = "master"
-    $AssetLocation           = "https://raw.githubusercontent.com/Azure-Samples/active-directory-lab-hybrid-adfs/$Branch/lab-hybrid-adfs/"
+#    $AssetLocation           = "https://raw.githubusercontent.com/Azure-Samples/active-directory-lab-hybrid-adfs/$Branch/lab-hybrid-adfs/"
+    $AssetLocation           = "https://raw.githubusercontent.com/Talyvan/ADFSLab/$Branch/lab-hybrid-adfs/"
     $localAssetLocation      = ".\OneDrive - Deloitte (O365D)\LABS\active-directory-lab-hybrid-adfs-master\lab-hybrid-adfs\"
 
     $userName                = "ADadmin"
